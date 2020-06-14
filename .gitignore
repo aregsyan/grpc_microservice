@@ -1,0 +1,3 @@
+node_modules
+client_microservice/node_modules
+server_microservice/node_modules

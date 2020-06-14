@@ -1,0 +1,37 @@
+version: '3.6'
+services:
+  client:
+    build:
+      context: .
+    restart: always
+    cap_add:
+      - ALL
+    ports:
+      - "8080:8080"
+      - "9229:9229"
+    env_file:
+      - client_microservice/.env
+    container_name: app_client_microservice
+    depends_on:
+      - server
+    networks:
+      local-net:
+        aliases:
+          - client_microservice
+  server:
+    build:
+      context: .
+      dockerfile: ./server_microservice/Dockerfile
+    restart: always
+    cap_add:
+      - ALL
+    env_file:
+      - server_microservice/.env
+    container_name: server_microservice
+    networks:
+      local-net:
+        aliases:
+          - server_microservice
+networks:
+  local-net:
+    external: false

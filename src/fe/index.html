@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Grpc Microservice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src='index.js'> </script>
+  </head>
+  <body>
+    <h1 class='grpc-header'>GRPC Microservice</h1>
+    <h6>Messages:</h6>
+    <div id="history"></div>
+    <h6>New Message:</h6>
+    <form id="client_messaging">
+      <div class="form-group">
+        <label for="client_name">Name</label>
+        <input type="text" class="form-control" id="client_name" aria-describedby="nameDescription">
+        <small id="nameDescription" class="form-text text-muted">Please enter your name.</small>
+      </div>
+      <div class="form-group">
+        <label for="client_message">Message</label>
+        <input type="text" class="form-control" id="client_message">
+      </div>
+      <button type="submit" id=client_send class="btn btn-primary">Send</button>
+    </form>
+  </body>
+</html>

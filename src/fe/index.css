@@ -1,0 +1,41 @@
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.right {
+    text-align: right;
+    margin-right:0;
+}
+
+.grpc-header {
+    text-align: center
+}
+
+#history {
+    min-height: 100px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dedede;
+    border-radius: 5px;
+}
